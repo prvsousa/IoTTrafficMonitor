@@ -43,7 +43,7 @@ bogus-priv
 dhcp-range=192.168.5.2,192.168.5.100,24h
 ```
 
-### RUN THE COMMAND 
+#### RUN THE COMMAND 
 ```bash
 sudo systemctl unmask hostapd
 ```
@@ -64,7 +64,7 @@ network 192.168.5.0
 broadcast 192.168.5.255
 ```
 
-### SET IP TABLES RULES FOR HOTSPOT
+#### SET IP TABLES RULES FOR HOTSPOT
 ```bash
 sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE 
 sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
